@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Rubik Bubbles' rel='stylesheet'>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div id="room-info">
+        <span id="room-number"></span>
+        <span id="player-symbol"></span>
+    </div>
+    <div id="game-info">
+        <div id="turn">Player X's Turn</div>
+        <div id="scoreboard">
+            <div>Total Matches: <span id="total-matches">0</span></div>
+            <div>Current Match: <span id="current-match">0</span></div>
+            <div>Player X Wins: <span id="wins-x">0</span></div>
+            <div>Player O Wins: <span id="wins-o">0</span></div>
+        </div>
+    </div>
+    <div id="board">
+        <div class="cell" id="cell0"></div>
+        <div class="cell" id="cell1"></div>
+        <div class="cell" id="cell2"></div>
+        <div class="cell" id="cell3"></div>
+        <div class="cell" id="cell4"></div>
+        <div class="cell" id="cell5"></div>
+        <div class="cell" id="cell6"></div>
+        <div class="cell" id="cell7"></div>
+        <div class="cell" id="cell8"></div>
+    </div>
+    <button id="reset">Reset Game</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
